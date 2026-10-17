@@ -1,0 +1,15 @@
+# Netlify build settings for VitalCheck. Set the site's base directory to
+# 2-practitioner-app (or import the repo with this file as the base) and add
+# VITE_EPIC_CLIENT_ID as a site environment variable. Vite inlines it at
+# build time, so a changed value needs a new deploy.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# The app has one route, "/". Epic redirects back to the site origin with a
+# query string, which this rule leaves untouched. It only keeps a deep link
+# or a refresh on an unexpected path from showing Netlify's 404 page.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
