@@ -1,0 +1,18 @@
+{
+  "name": "vitalwatch",
+  "version": "1.0.0",
+  "description": "Backend service for Epic: reads vitals with a system token and reports abnormal readings",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "bulk": "node src/index.js --bulk"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-jose": "^2.2.0"
+  }
+}

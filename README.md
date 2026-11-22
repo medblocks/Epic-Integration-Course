@@ -7,14 +7,14 @@ This course has three videos and three apps. All three apps run against Epic's p
 | Folder | App | What it builds | Video |
 | --- | --- | --- | --- |
 | [1-patient-app](1-patient-app/) | CareSummary | A patient-facing app. The patient logs in with MyChart. The app shows a one-page summary of their conditions, medications, labs, and vitals. The browser does OAuth 2.0 with PKCE by hand, with no OAuth library. | Build a patient app with Epic (link coming) |
-| 2-practitioner-app | Coming soon | A clinician-facing app. Epic launches it from inside the clinical workflow. | Build a practitioner app with Epic |
-| 3-backend-app | Coming soon | A backend service. It connects to Epic with its own credentials. No user is in the loop. | Build a backend app with Epic |
+| [2-practitioner-app](2-practitioner-app/) | VitalCheck | A clinician-facing app. Epic launches it from inside the clinical workflow, with the patient and the encounter already selected. The app shows the patient's vitals and medications and writes a new vital reading back to the chart. | Build a practitioner app with Epic |
+| [3-backend-app](3-backend-app/) | VitalWatch | A backend service. It connects to Epic with its own credentials. No user is in the loop. A Node script signs a JWT, gets a system access token, reads vitals one patient at a time or through a bulk export, and writes a report of abnormal readings. | Build a backend app with Epic |
 
 ## What each folder contains
 
 - `README.md`: what the app does, what to register on fhir.epic.com, and how to run the app.
 - `PROMPT.md`: the full prompt that built the app. Paste the whole file into a coding agent.
-- The source code. Run `npm install` and then `npm run dev` inside the folder.
+- The source code. Run `npm install` and then `npm run dev` inside the folder. The backend app is a script, not a web page: run it with `npm start`.
 
 ## Before you start
 
